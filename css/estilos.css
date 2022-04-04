@@ -11,12 +11,29 @@
   --text-btn: #fff;
   --padding-btn: 20px 35px;
   --height-wave: 18em;
+  --hoverBgColor: #503bff;
+  --hoverBgColor2: #8293ff;
 }
 
 body {
   font-family: "Inter", sans-serif;
   background-color: #e5e5f7;
 }
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+
+
 
 .container {
   width: var(--width-container);
@@ -53,6 +70,34 @@ body {
 }
 
 .hero_title {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #0084ff 0%,
+    #0f27b3 29%,
+    #19087a 67%,
+    #0084ff 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+  font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.hero_title {
   font-size: 4rem;
 }
 
@@ -60,9 +105,23 @@ body {
   width: 95%;
 }
 
+img.hero_img {
+  animation: float 4s ease-in-out infinite;
+}
+
 .hero_copy {
   font-size: 1.2rem;
   margin: 25px 0;
+}
+
+a.cta:hover{
+  background: linear-gradient(
+    130deg,
+    var(--hoverBgColor) 0%,
+    var(--hoverBgColor2) 100%
+  );
+  color: white;
+  transition: 0.3s all ease-in-out;
 }
 
 .hero_cta {
@@ -72,6 +131,16 @@ body {
   padding: var(--padding-btn);
   text-align: center;
   text-decoration: none;
+}
+
+a.hero_cta:hover {
+  background: linear-gradient(
+    130deg,
+    var(--hoverBgColor) 0%,
+    var(--hoverBgColor2) 100%
+  );
+  color: white;
+  transition: 0.3s all ease-in-out;
 }
 
 .main {
@@ -188,6 +257,17 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+.card_item:hover {
+  background: linear-gradient(
+    130deg,
+    var(--hoverBgColor) 0%,
+    var(--hoverBgColor2) 100%
+  );
+  color: white;
+  transition: 0.3s all ease-in-out;
+}
+
 .card_img {
   background: var(--color-primary);
   margin-top: 20px;
@@ -287,7 +367,7 @@ body {
 
 .footer_copy {
   margin: 20px 0;
-  font-weight: 300;
+  font-weight: 3rem;
 }
 
 .footer_picture {
@@ -295,26 +375,33 @@ body {
 }
 
 .footer_img {
-  width: 100%;
+  width: 350px;
 }
 
 .footer_social {
   display: flex;
-  padding-top: 30px;
   flex-wrap: wrap;
 }
 .footer_link {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border: 1px solid black;
   border-radius: 50%;
   margin-right: 20px;
-  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.footer_link:hover {
+  background: linear-gradient(
+    130deg,
+    var(--hoverBgColor) 0%,
+    var(--hoverBgColor2) 100%
+  );
+  color: white;
+  transition: 1s all ease-in-out;
+}
 .footer_icon {
   width: 30px;
 }
@@ -461,5 +548,13 @@ body {
   }
   .course_picture {
     display: none;
+  }
+  .footer_text h2{
+    font-size: 30px;
+    width: fit-content;
+  }
+  p.footer_copy{
+    font-size: 20px;
+    width: fit-content;
   }
 }
