@@ -10,6 +10,16 @@
     <link href="css/estilos.css" rel="stylesheet" />
   </head>
   <body>
+    <nav class="nav">
+      <div class="nav_container">
+        <div class="nav_menu">
+          <a href="#" class="nav_item">Inicio</a>
+          <a href="#acerca-de" class="nav_item">Acerca de</a>
+          <a href="#temas" class="nav_item">Temas</a>
+          <a href="#contacto" class="nav_item">Contacto</a>
+        </div>
+      </div>
+    </nav>
 
     <header class="hero">
       <div class="hero_container container">
@@ -25,7 +35,7 @@
     </header>
     <main class="main">
       <section class="instructor container">
-        <div class="instructor_container">
+        <div class="instructor_container" id="acerca-de">
           <img src="assets/Basic_Ui_(186).jpg" class="instructor_img" />
           <h2 class="instructor_name">Thiago Cordon</h2>
           <p class="instructor_tag">
@@ -61,7 +71,7 @@
           <img src="assets/mockup.svg" class="about_img" />
         </figure>
       </section>
-      <section class="card">
+      <section class="card" id="temas">
         <div class="container">
           <h2 class="title">Aprende los temas más importantes.</h2>
           <p class="card_copy">
@@ -156,7 +166,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacto">
       <div class="footer_container container">
         <div class="footer_contact">
           <div class="footer_text">
