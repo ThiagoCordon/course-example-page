@@ -14,9 +14,6 @@
   --hoverBgColor: #503bff;
   --hoverBgColor2: #8293ff;
 }
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   font-family: "Inter", sans-serif;
