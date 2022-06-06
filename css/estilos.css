@@ -178,7 +178,6 @@ body {
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 4s linear infinite;
@@ -439,17 +438,22 @@ a.hero_cta:hover {
 .footer {
   position: relative;
   --padding-container: 160px 0 50px;
+  background: #36374d;
+  color: #e5e5f7;
+}
+
+.footer_text h2{
+  color: #e5e5f7;
 }
 
 .footer::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100px;
+  height: 125px;
   background: #fff;
   top: 0;
   left: 0;
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 
 .footer_contact {
@@ -465,18 +469,11 @@ a.hero_cta:hover {
   font-weight: 3rem;
 }
 
-.footer_picture {
-  margin: 0;
-}
-
-.footer_img {
-  width: 350px;
-}
-
 .footer_social {
   display: flex;
   flex-wrap: wrap;
 }
+
 .footer_link {
   width: 40px;
   height: 40px;
@@ -503,7 +500,7 @@ a.hero_cta:hover {
 
 .footer_copyright {
   padding-top: 30px;
-  border-top: 2px solid #918484;
+  border-top: 2px solid ;
   text-align: center;
 }
 
@@ -649,7 +646,7 @@ a.hero_cta:hover {
     width: fit-content;
   }
   p.footer_copy {
-    font-size: 20px;
+    font-size: 17px;
     width: fit-content;
   }
 }
